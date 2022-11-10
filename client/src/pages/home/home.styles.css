@@ -1,0 +1,25 @@
+.home-content {
+  grid-template-columns: 116px repeat(2, 1fr);
+  padding-top: 5.5rem;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.home-container {
+  row-gap: 7rem;
+}
+
+/* For medium devices  */
+@media screen and (max-width: 768px) {
+  .home-content {
+    grid-template-columns: 0.5fr 3fr;
+    padding-top: 3.5rem;
+  }
+}
+/* For large devices  */
+@media screen and (max-width: 992px) {
+  .home-content {
+    grid-template-columns: 100px repeat(2, 1rf);
+    column-gap: 1.25rem;
+  }
+}
