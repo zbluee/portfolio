@@ -47,7 +47,7 @@
   --z-fixed: 100;
   --z-modal: 1000;
 }
- 
+
 /* Responsive typography  */
 @media screen and (max-width: 992px) {
   :root {
@@ -94,7 +94,7 @@ ul {
   list-style: none;
 }
 a {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 button {
@@ -188,7 +188,7 @@ img {
     padding: 2rem 0 4rem;
   }
 
-  .section__subtitle {
+  .section-subtitle {
     margin-bottom: var(--mb-3);
   }
 }
@@ -204,9 +204,8 @@ img {
     padding: 1rem 1.75rem;
   }
 
-  .button__icon {
+  .button-icon {
     width: 22px;
     height: 22px;
   }
 }
-
