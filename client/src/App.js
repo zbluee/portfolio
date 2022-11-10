@@ -1,26 +1,22 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
+import Header from "./components/header/header.component";
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      message : 'empty'
-    }
+      message: "empty",
+    };
   }
-  componentDidMount(){
-    fetch('http://localhost:3000/test').then(response => response.json()).then(msg => {
-    console.log(msg);  
-    this.setState({message : msg})
-    }).catch(err => console.log(err))
-  }
-  render(){
-    return(
-      <div className='App'>
-        <h1>{this.state.message}</h1>
-      </div>
-    )
+  
+  render() {
+    return (
+      <>
+        <Header />
+      </>
+    );
   }
 }
 
-export default App
+export default App;
