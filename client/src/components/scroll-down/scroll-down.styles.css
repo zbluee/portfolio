@@ -1,0 +1,23 @@
+.scroll {
+  margin-left: 9.25rem;
+}
+.scroll-name {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-right: var(--mb-0-25);
+  margin-left: 2px;
+}
+
+/* For large devices  */
+@media screen and (max-width: 992px) {
+  .scroll {
+    margin-left: 7.5rem;
+  }
+}
+
+/* For medium devices  */
+@media screen and (max-width: 768px) {
+  .scroll {
+    display: none;
+  }
+}
