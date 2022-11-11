@@ -28,7 +28,7 @@ const HomeContent = () => (
       I'm web developer and web scrapper who is highly interested on ml and
       cyber security.
     </p>
-    <a href="#contact" className="button button-flex">
+    <a href="#contact" className="button button-flex" id="ct-btn">
       Contact Me <Send />
     </a>
   </div>
