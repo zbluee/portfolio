@@ -1,15 +1,15 @@
 import React from "react";
 import "./header.styles.css";
 import { connect } from "react-redux";
-import { toggleMenuHidden } from "../../redux/header/header.actions";
+import { toggleMenuHidden, toggleThemeDark } from "../../redux/header/header.actions";
 
-const Header = ({ toggle, dispatch }) => (
+const Header = ({ toggleMenu, toggleTheme, dispatch }) => (
   <header className="header">
     <nav className="nav container">
       <a href="index.html" className="nav-logo">
         Amanuel
       </a>
-      <div className={toggle ? "nav-menu show-menu" : "nav-menu"}>
+      <div className={toggleMenu ? "nav-menu show-menu" : "nav-menu"}>
         <ul className="nav-list grid">
           <li className="nav-item">
             <a href="#home" className="nav-link active-link">
@@ -47,6 +47,12 @@ const Header = ({ toggle, dispatch }) => (
               Contact
             </a>
           </li>
+          <li className="nav-item">
+            <a href="#contact" className="nav-link" onClick={() => dispatch(toggleThemeDark())}>
+              <i className={`uil uil-${toggleTheme? "moon" : "brightness"} nav-icon`}></i>
+              {toggleTheme ? "Light" : "Dark"}
+            </a>
+          </li>
         </ul>
         <i class="uil uil-times nav-close" onClick={() => dispatch(toggleMenuHidden())}></i>
       </div>
@@ -58,7 +64,7 @@ const Header = ({ toggle, dispatch }) => (
 );
 
 
-const mapStateToProps = ({ header: { toggle } }) => ({
-  toggle,
+const mapStateToProps = ({ header: { toggleMenu, toggleTheme } }) => ({
+  toggleMenu, toggleTheme
 });
 export default connect(mapStateToProps)(Header);

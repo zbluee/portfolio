@@ -1,8 +1,20 @@
 /* Google fonts  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+
+
+.dark-theme{
+  --title-color: 	hsl(203, 42%, 56%);
+  --title-color-dark: hsl(203, 100%, 64%);
+  --text-color: hsl(0, 0%, 97%);
+  --body-color: 	hsl(200, 31%, 10%);
+  --container-color: black;
+    background-color: 	hsl(200, 31%, 10%)
+
+}
 /* Css Variables  */
 :root {
+  
   --header-height: 3rem;
 
   /* Colors : color mode hsl(hue, saturation, lightness)  */
