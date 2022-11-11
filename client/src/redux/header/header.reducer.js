@@ -1,14 +1,20 @@
 import { headerActionTypes } from "./header.actiontype";
 const INITIAL_STATE = {
-  toggle: false,
+  toggleMenu: false,
+  toggleTheme: false,
 };
 
 const headerReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case headerActionTypes.TOGGLE_MENU_HIDDEN :
+    case headerActionTypes.TOGGLE_MENU_HIDDEN:
       return {
         ...state,
-        toggle: !state.toggle,
+        toggleMenu: !state.toggleMenu,
+      };
+    case headerActionTypes.TOGGLE_THEME_DARK:
+      return {
+        ...state,
+        toggleTheme: !state.toggleTheme,
       };
     default:
       return state;
