@@ -3,10 +3,10 @@ import "./App.css";
 import { connect } from 'react-redux';
 import Header from "./components/header/header.component";
 import Home from "./pages/home/home.component";
+import About from "./pages/about/about.component";
 
 class App extends React.Component {
-  
-  
+
   render() {
     const {toggleTheme} = this.props
     return (
@@ -14,6 +14,7 @@ class App extends React.Component {
         <Header />
         <main className="main">
           <Home />
+          <About />
         </main>
       </div>
     );
