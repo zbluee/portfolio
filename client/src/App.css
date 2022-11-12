@@ -4,11 +4,14 @@
 
 
 .dark-theme{
+  
   --title-color: 	hsl(203, 42%, 56%);
-  --title-color-dark: hsl(203, 100%, 64%);
+  --title-color-dark: hsl(203, 89%, 37%);
   --text-color: hsl(0, 0%, 97%);
   --body-color: 	hsl(200, 31%, 10%);
   --container-color: black;
+  --box-background-color : hsl(200, 31%, 10%);
+  --box-border-color : rgba(0, 0, 2, 0.247);
     background-color: 	hsl(200, 31%, 10%)
 
 }
@@ -18,11 +21,13 @@
   --header-height: 3rem;
 
   /* Colors : color mode hsl(hue, saturation, lightness)  */
-
+  
   --title-color: hsl(0, 0%, 20%);
   --title-color-dark: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 46%);
   --body-color: hsl(0, 0%, 98%);
+  --box-background-color : white;
+  --box-border-color : rgba(0, 0, 0, 0.1);
   --container-color: white;
 
   /* Font and typography  */
@@ -126,7 +131,7 @@ img {
 }
 .section-title {
   font-size: var(--h1-font-size);
-  color: var(--text-color);
+  color: var(--title-color);
 }
 .section-subtitle {
   display: block;
@@ -136,6 +141,19 @@ img {
 .section-title,
 .section-subtitle {
   text-align: center;
+}
+
+.title-underline{
+  width: 6rem;
+  height: 1px;
+  border: 0;
+  margin: 0 auto 4rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    var(--title-color),
+    var(--title-color-dark)
+  );
 }
 
 /* Layout  */
@@ -159,10 +177,12 @@ img {
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  transition: ease-out 1s;
 }
 
 .button:hover {
   background-color: var(--title-color-dark);
+  box-shadow: inset 400px 0 0 0 var(--title-color-dark);
 }
 
 .button-icon {
