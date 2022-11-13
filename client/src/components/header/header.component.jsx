@@ -2,6 +2,8 @@ import React from "react";
 import "./header.styles.css";
 import { connect } from "react-redux";
 import { toggleMenuHidden, toggleThemeDark } from "../../redux/header/header.actions";
+import { createStructuredSelector } from "reselect";
+import { selectToggleMenu, selectToggleTheme } from "../../redux/header/header.selectors";
 
 const Header = ({ toggleMenu, toggleTheme, dispatch }) => (
   <header className="header">
@@ -64,7 +66,8 @@ const Header = ({ toggleMenu, toggleTheme, dispatch }) => (
 );
 
 
-const mapStateToProps = ({ header: { toggleMenu, toggleTheme } }) => ({
-  toggleMenu, toggleTheme
+const mapStateToProps = createStructuredSelector ({
+  toggleMenu : selectToggleMenu,
+   toggleTheme : selectToggleTheme
 });
 export default connect(mapStateToProps)(Header);
