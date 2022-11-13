@@ -24,11 +24,13 @@
 
 .about-subtitle{
     font-size: var(--tiny-font-size);
+    color: var(--text-color);
 }
 
 .about-descriprtion{
     padding: 0 4rem 0 0;
     margin-bottom: var(--mb-2);
+    color: var(--text-color);
 }
 
 /* For small devices  */

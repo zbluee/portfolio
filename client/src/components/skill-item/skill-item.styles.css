@@ -1,0 +1,22 @@
+.skills-data {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.skills-name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 15px;
+  color: var(--title-color);
+}
+.skills-level {
+  font-size: var(--tiny-font-size);
+  color: var(--text-color);
+}
+
+/* For small devices  */
+@media screen and (max-width: 350px) {
+  .skills-name {
+    font-size: var;
+  }
+}
