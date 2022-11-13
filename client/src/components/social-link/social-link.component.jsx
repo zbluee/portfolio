@@ -20,12 +20,12 @@ const Social = () => (
       <i class="uil uil-linkedin"></i>
     </a>
     <a
-      href="https://instagram.com/"
+      href="https://t.me/zeblue"
       className="social-icon"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="uil uil-instagram"></i>
+      <i class="uil uil-telegram"></i>
     </a>
   </div>
 );
