@@ -1,0 +1,22 @@
+.skills-container {
+  grid-template-columns: repeat(3, 290px);
+  column-gap: 3rem;
+  justify-content: center;
+}
+
+/* Breakpoints  */
+
+/* For medium devices  */
+@media screen and (max-width: 576px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* For large devices  */
+@media screen and (max-width: 992px) {
+  .skills-container {
+    grid-template-columns: max-content;
+    row-gap: 2rem;
+  }
+}
