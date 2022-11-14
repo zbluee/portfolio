@@ -1,0 +1,11 @@
+.services-modal-service{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.services-modal-info{
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+}
+

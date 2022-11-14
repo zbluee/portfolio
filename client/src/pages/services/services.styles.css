@@ -1,0 +1,27 @@
+.services-container {
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
+  columns: 3rem;
+}
+
+/* Breakpoints  */
+/* For small devices  */
+
+@media screen and (max-width: 576px) {
+  .services-container {
+    grid-template-columns: max-content;
+  }
+}
+
+/* For medium devices  */
+@media screen and (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(1, 290px);
+  }
+}
+@media screen and (max-width: 992pz) {
+    .services-container {
+      grid-template-columns: repeat(2, 260px);
+    }
+  }
+
