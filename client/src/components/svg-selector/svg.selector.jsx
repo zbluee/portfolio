@@ -2,6 +2,10 @@ import React from "react";
 import { ReactComponent as Education } from "../../assets/graduation.svg";
 import { ReactComponent as Experience } from "../../assets/briefcase.svg";
 import { ReactComponent as Interest } from "../../assets/interest.svg";
+import { ReactComponent as Code } from "../../assets/code.svg";
+import { ReactComponent as ArrowRight } from "../../assets/arrow-right.svg";
+import { ReactComponent as Checked } from "../../assets/checked.svg";
+import { ReactComponent as Scrap } from "../../assets/scrap-icon.svg";
 
 const SvgSelector = ({ iconName }) => {
   switch (iconName) {
@@ -11,8 +15,16 @@ const SvgSelector = ({ iconName }) => {
       return <Interest />;
     case "Experience":
       return <Experience />;
-    default :
-        return "svg-missed"
+    case "Code":
+      return <Code />;
+    case "ArrowRight":
+      return <ArrowRight />;
+    case "Check":
+      return <Checked />;
+    case "Scrap":
+      return <Scrap />;
+    default:
+      return "svg-missed";
   }
 };
 

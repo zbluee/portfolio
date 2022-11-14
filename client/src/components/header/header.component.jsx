@@ -1,15 +1,21 @@
 import React from "react";
 import "./header.styles.css";
 import { connect } from "react-redux";
-import { toggleMenuHidden, toggleThemeDark } from "../../redux/header/header.actions";
+import {
+  toggleMenuHidden,
+  toggleThemeDark,
+} from "../../redux/header/header.actions";
 import { createStructuredSelector } from "reselect";
-import { selectToggleMenu, selectToggleTheme } from "../../redux/header/header.selectors";
+import {
+  selectToggleMenu,
+  selectToggleTheme,
+} from "../../redux/header/header.selectors";
 
 const Header = ({ toggleMenu, toggleTheme, dispatch }) => (
   <header className="header">
     <nav className="nav container">
       <a href="index.html" className="nav-logo">
-        Amanuel
+        Amanuel T.
       </a>
       <div className={toggleMenu ? "nav-menu show-menu" : "nav-menu"}>
         <ul className="nav-list grid">
@@ -50,13 +56,24 @@ const Header = ({ toggleMenu, toggleTheme, dispatch }) => (
             </a>
           </li>
           <li className="nav-item">
-            <a href="#contact" className="nav-link" onClick={() => dispatch(toggleThemeDark())}>
-              <i className={`uil uil-${toggleTheme? "moon" : "brightness"} nav-icon`}></i>
+            <a
+              href="#contact"
+              className="nav-link"
+              onClick={() => dispatch(toggleThemeDark())}
+            >
+              <i
+                className={`uil uil-${
+                  toggleTheme ? "moon" : "brightness"
+                } nav-icon`}
+              ></i>
               {toggleTheme ? "Light" : "Dark"}
             </a>
           </li>
         </ul>
-        <i class="uil uil-times nav-close" onClick={() => dispatch(toggleMenuHidden())}></i>
+        <i
+          class="uil uil-times nav-close"
+          onClick={() => dispatch(toggleMenuHidden())}
+        ></i>
       </div>
       <div className="nav-toggle" onClick={() => dispatch(toggleMenuHidden())}>
         <i className="uil uil-apps"></i>
@@ -65,9 +82,8 @@ const Header = ({ toggleMenu, toggleTheme, dispatch }) => (
   </header>
 );
 
-
-const mapStateToProps = createStructuredSelector ({
-  toggleMenu : selectToggleMenu,
-   toggleTheme : selectToggleTheme
+const mapStateToProps = createStructuredSelector({
+  toggleMenu: selectToggleMenu,
+  toggleTheme: selectToggleTheme,
 });
 export default connect(mapStateToProps)(Header);

@@ -7,7 +7,7 @@ import Typewriter from "typewriter-effect";
 const HomeContent = () => (
   <div className="content">
     <h1 className="title">
-      Amanuel F.{" "}
+      Amanuel T.{" "}
       <a href="#contact">
         <Hand />{" "}
       </a>
@@ -19,7 +19,7 @@ const HomeContent = () => (
           options={{
             autoStart: true,
             loop: true,
-            strings: [" Developer.", " Scrapper."],
+            strings: [" Developer.", " Scraper."],
           }}
         />
       </span>
