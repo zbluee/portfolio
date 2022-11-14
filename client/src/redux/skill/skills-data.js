@@ -7,7 +7,7 @@ const SKILL_DATA = [
       { id: 2, skillName: "JS", skillLevel: "Intermidiate" },
       { id: 3, skillName: "CSS", skillLevel: "Intermidiate" },
       { id: 4, skillName: "BootStrap", skillLevel: "Basic" },
-      { id: 5, skillName: "HTML", skillLevel: "Basic" },
+      { id: 5, skillName: "HTML", skillLevel: "Intermidiate" },
     ],
   },
   {

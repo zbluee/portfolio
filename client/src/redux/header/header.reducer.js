@@ -2,6 +2,8 @@ import { headerActionTypes } from "./header.actiontype";
 const INITIAL_STATE = {
   toggleMenu: false,
   toggleTheme: false,
+  toggleTab: null,
+  toggleSkillsTab: null,
 };
 
 const headerReducer = (state = INITIAL_STATE, action) => {
@@ -15,6 +17,16 @@ const headerReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         toggleTheme: !state.toggleTheme,
+      };
+    case headerActionTypes.TOGGLE_TAB_CLOSE:
+      return {
+        ...state,
+        toggleTab: action.payload,
+      };
+    case headerActionTypes.TOGGLE_SKILLS_TAB_CLOSE:
+      return {
+        ...state,
+        toggleSkillsTab: action.payload,
       };
     default:
       return state;
