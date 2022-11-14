@@ -10,8 +10,8 @@ const Skills = ({ skillCollections }) => (
     <h2 className="section-title">Skills</h2>
     <hr className="title-underline" />
     <div className="skills-container container grid">
-      {skillCollections.map(({ id, ...othersSkillCollection }) => (
-        <SkillCollection key={id} {...othersSkillCollection} />
+      {skillCollections.map(( skillCollection ) => (
+        <SkillCollection key={skillCollection.id} {...skillCollection} />
       ))}
     </div>
   </section>

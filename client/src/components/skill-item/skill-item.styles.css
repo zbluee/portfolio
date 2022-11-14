@@ -17,6 +17,6 @@
 /* For small devices  */
 @media screen and (max-width: 350px) {
   .skills-name {
-    font-size: var;
+    font-size: var(--small-font-size);
   }
 }
