@@ -1,33 +1,30 @@
 /* Google fonts  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-
-
-.dark-theme{
-  
-  --title-color: 	hsl(203, 42%, 56%);
+.dark-theme {
+  --title-color: hsl(203, 42%, 56%);
   --title-color-dark: hsl(203, 89%, 37%);
   --text-color: hsl(0, 0%, 97%);
-  --body-color: 	hsl(200, 31%, 10%);
+  --body-color: hsl(200, 31%, 10%);
   --container-color: black;
-  --box-background-color : hsl(201, 28%, 12%);
-  --box-border-color : rgba(0, 0, 2, 0.247);
-    background-color: 	hsl(200, 31%, 10%)
-
+  --box-background-color: hsl(201, 28%, 12%);
+  --box-border-color: rgba(0, 0, 2, 0.247);
+  --box-modal-color: rgba(0, 0, 2, 0.5);
+  background-color: hsl(200, 31%, 10%);
 }
 /* Css Variables  */
 :root {
-  
   --header-height: 3rem;
 
   /* Colors : color mode hsl(hue, saturation, lightness)  */
-  
+
   --title-color: hsl(0, 0%, 20%);
   --title-color-dark: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 46%);
   --body-color: hsl(0, 0%, 98%);
-  --box-background-color : white;
-  --box-border-color : rgba(0, 0, 0, 0.1);
+  --box-background-color: white;
+  --box-border-color: rgba(0, 0, 0, 0.1);
+  --box-modal-color: rgba(0, 0, 0, 0.5);
   --container-color: white;
 
   /* Font and typography  */
@@ -143,7 +140,7 @@ img {
   text-align: center;
 }
 
-.title-underline{
+.title-underline {
   width: 6rem;
   height: 1px;
   border: 0;
@@ -156,6 +153,68 @@ img {
   );
 }
 
+.viewmore-button {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  cursor: pointer;
+}
+
+.viewmore-icon {
+  transition: 0.3s;
+}
+
+.viewmore-button:hover .viewmore-icon {
+  transform: translateX(00.25rem);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--box-modal-color);
+  z-index: var(--z-modal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pad: 0 1 rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.modal-content {
+  width: 500px;
+  position: relative;
+  background-color: var(--box-background-color);
+  padding: 4.5rem 2.5rem 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  color: var(--title-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1);
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
 /* Layout  */
 
 .container {
