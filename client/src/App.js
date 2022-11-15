@@ -8,6 +8,7 @@ import Home from "./pages/home/home.component";
 import About from "./pages/about/about.component";
 import Skills from "./pages/skills/skills.component";
 import Services from "./pages/services/services.component";
+import Work from "./pages/work/work.component";
 
 class App extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class App extends React.Component {
           <About />
           <Skills />
           <Services />
+          <Work />
         </main>
       </div>
     );
