@@ -1,0 +1,36 @@
+.work-containter{
+    grid-template-columns: repeat(2, max-content);
+    gap: 3rem ;
+    justify-content: center;
+}
+/* small devices  */
+@media screen and (max-width : 350px){
+    .work-containter{
+        grid-template-columns: max-content;
+    }
+}
+/* Medium devices  */
+@media screen and (max-width : 576px){
+    .work-containter{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width : 768px){
+    .work-containter{
+        grid-template-columns: max-content;
+    }
+}
+
+/* Large devices  */
+@media screen and (max-width : 992px){
+    .work-containter{
+        gap: 1.25rem;
+    }
+}
+
+
+
+
+
