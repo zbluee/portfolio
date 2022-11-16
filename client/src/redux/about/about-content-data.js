@@ -4,7 +4,7 @@ const ABOUT_CONTENT = [
     title: "Education",
     subtitle: "Computer Science",
   },
-  { id: 1, title: "Experience", subtitle: "8 months" },
+  { id: 1, title: "Experience", subtitle: "Student" },
   {
     id: 2,
     title: "Interest",
