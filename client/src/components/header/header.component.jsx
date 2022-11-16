@@ -71,7 +71,7 @@ const Header = ({ toggleMenu, toggleTheme, dispatch }) => (
           </li>
         </ul>
         <i
-          class="uil uil-times nav-close"
+          className="uil uil-times nav-close"
           onClick={() => dispatch(toggleMenuHidden())}
         ></i>
       </div>
