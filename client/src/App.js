@@ -9,6 +9,7 @@ import About from "./pages/about/about.component";
 import Skills from "./pages/skills/skills.component";
 import Services from "./pages/services/services.component";
 import Work from "./pages/work/work.component";
+import Testimonials from "./pages/testimonials/testimonials.component";
 
 class App extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class App extends React.Component {
           <Skills />
           <Services />
           <Work />
+          <Testimonials />
         </main>
       </div>
     );
