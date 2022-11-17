@@ -11,6 +11,7 @@ import Services from "./pages/services/services.component";
 import Work from "./pages/work/work.component";
 import Testimonials from "./pages/testimonials/testimonials.component";
 import Contact from "./pages/contact/contact-component";
+import Footer from "./pages/footer/footer.component";
 
 class App extends React.Component {
   render() {
@@ -27,6 +28,7 @@ class App extends React.Component {
           <Testimonials />
           <Contact />
         </main>
+          <Footer />
       </div>
     );
   }
