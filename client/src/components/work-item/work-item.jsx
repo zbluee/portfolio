@@ -9,7 +9,7 @@ const WorkItem = ({ title, imageUrl, addressLink }) => {
       <h3 className="work-title">{title}</h3>
       <a
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         href={addressLink}
       >
          <span className="link-span" />

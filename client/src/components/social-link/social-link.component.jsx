@@ -27,6 +27,14 @@ const Social = () => (
     >
       <i className="uil uil-telegram"></i>
     </a>
+    <a
+      href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=amanueltemesgen9@gmail.com"
+      className="social-icon mail"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="uil uil-envelope-edit"></i>
+    </a>
   </div>
 );
 
