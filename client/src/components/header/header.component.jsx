@@ -57,7 +57,7 @@ const Header = ({ toggleMenu, toggleTheme, dispatch }) => (
           </li>
           <li className="nav-item">
             <a
-              href="#contact"
+              href="#theme"
               className="nav-link"
               onClick={() => dispatch(toggleThemeDark())}
             >
