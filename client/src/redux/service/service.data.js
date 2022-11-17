@@ -17,7 +17,7 @@ const SERVICE_DATA = [
   {
     id: 1,
     titleSvg: "Scrap",
-    title: "Web Scrapper",
+    title: "Web Scraper",
     description:
       "responsible for extracting and ingesting data from websites using tools such as Python, as well as handling and automating the process of storing the extracted data in order to assist in accessing good data sources and saving valuable time.",
     infos: [
