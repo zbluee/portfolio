@@ -254,6 +254,14 @@ img {
 }
 
 /* Breakpoints  */
+
+/* For very small devices  */
+@media screen and (max-width: 270px) {
+  .button {
+    padding: 1rem 1rem !important;
+  }
+ 
+}
 /* For small devices  */
 @media screen and (max-width: 350px) {
   :root {

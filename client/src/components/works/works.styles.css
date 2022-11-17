@@ -3,6 +3,14 @@
     gap: 3rem ;
     justify-content: center;
 }
+
+/* very small devices  */
+@media screen and (max-width: 270px) {
+    .work-containter{
+      grid-template-columns: repeat(1, 200px) !important;
+    }
+  }
+
 /* small devices  */
 @media screen and (max-width : 350px){
     .work-containter{

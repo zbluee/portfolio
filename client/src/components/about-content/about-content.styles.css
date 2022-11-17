@@ -1,68 +1,72 @@
-.about-info{
-    grid-template-columns: repeat(3, 140px);
-    gap: 0.5rem;
-    margin-bottom: var(--mb-2) ;
+.about-info {
+  grid-template-columns: repeat(3, 140px);
+  gap: 0.5rem;
+  margin-bottom: var(--mb-2);
 }
 
-.about-box{
-    background-color: var(--box-background-color);
-    border: 1px solid var(--box-border-color);
-    border-radius: 0.75rem;
-    text-align:center;
-    padding: 1rem 1.23rem;
+.about-box {
+  background-color: var(--box-background-color);
+  border: 1px solid var(--box-border-color);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 1rem 1.23rem;
 }
 
-.about-icon{
-    font-size: 1.5rem;
-    margin-bottom: var(--mb-0-5);
+.about-icon {
+  font-size: 1.5rem;
+  margin-bottom: var(--mb-0-5);
 }
 
-.about-title{
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
+.about-title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
 }
 
-.about-subtitle{
-    font-size: var(--tiny-font-size);
-    color: var(--text-color);
+.about-subtitle {
+  font-size: var(--tiny-font-size);
+  color: var(--text-color);
 }
 
-.about-descriprtion{
-    padding: 0 4rem 0 0;
-    margin-bottom: var(--mb-2);
-    color: var(--text-color);
+.about-descriprtion {
+  padding: 0 4rem 0 0;
+  margin-bottom: var(--mb-2);
+  color: var(--text-color);
 }
+
+@media screen and (max-width: 270px) {
+    .about-info{
+      grid-template-columns: repeat(1, 100px) !important;
+    }
+  }
 
 /* For small devices  */
 @media screen and (max-width: 350px) {
-    .about-info {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .about-info {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media screen and (max-width: 576px) {
-    .about-info {
-        grid-template-columns: repeat(3 1fr);
-    }
-    .about-descriprtion{
-        padding: 0;
-    }
-  }
-    
-  /* For large devices  */
-  @media screen and (max-width: 992px) {
-    .about-box{
-        padding: 0.75rem 0.5rem;
-    }
+}
 
-    .about-info{
-        justify-content: center;
-    }
-
-    .about-descriprtion{
-        padding: 0 5rem;
-        margin-bottom: var(--mb-1-5);
-    }
-    
+@media screen and (max-width: 576px) {
+  .about-info {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+  .about-descriprtion {
+    padding: 0;
+  }
+}
+
+/* For large devices  */
+@media screen and (max-width: 992px) {
+  .about-box {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .about-info {
+    justify-content: center;
+  }
+
+  .about-descriprtion {
+    padding: 0 5rem;
+    margin-bottom: var(--mb-1-5);
+  }
+}

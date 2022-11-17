@@ -11,3 +11,23 @@
 .social-icon:hover{
     color: var(--title-color-dark);
 }
+
+
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+
+}
+
+.footer-social .social-icon{
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width : 992px){
+    .footer-social .social-icon{
+        font-size: 1rem;
+    }
+}
+
