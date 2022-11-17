@@ -1,0 +1,103 @@
+.contact-container {
+  grid-template-columns: max-content;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+button.submit {
+  padding: 10px 24px;
+}
+
+.mg-0 {
+  margin: 0 auto 0;
+}
+
+.input-textarea {
+  width: 100%;
+  height: 20%;
+  border: 1px solid var(--title-color);
+  background: none;
+  color: var(--title-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  z-index: 1;
+  margin: 25px 0;
+  outline: none;
+  resize: none;
+}
+.input-textarea::placeholder {
+  color: var(--title-color);
+  transition: 300ms ease-out;
+}
+
+.input-textarea:focus::placeholder {
+  color: transparent;
+}
+
+.validation-error,
+.success-msg {
+  background: var(--box-background-color);
+  font-size: var(--small-font-size);
+  border-radius: 4px;
+  margin-bottom: var(--mb-1);
+}
+
+.validation-error {
+  color: #dc3545
+}
+.submitfield-msg, .success-msg{
+  position: relative;
+  top: 4.5rem;
+
+}
+.success-msg {
+  color: #28a745;
+}
+
+.loading{
+  width: 16px;
+  height: 16px;
+  margin-left: 20px;
+  border-width: 2px;
+  border: 2px solid var(--container-color);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotation 2s linear infinite;
+ 
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+
+/* Breakpoints  */
+/* For small devices  */
+
+@media screen and (max-width: 576px) {
+  .contact-container {
+    width: auto;
+    
+  }
+}
+
+/* For medium devices  */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}
+
+/* For large devices  */
+@media screen and (max-width: 992px) {
+  .contact-container {
+    column-gap: 3rem;
+  }
+}
