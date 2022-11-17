@@ -1,8 +1,8 @@
 import React from "react";
 import "./social-link.styles.css";
 
-const Social = () => (
-  <div className="social">
+const Social = ({footer}) => (
+  <div className={`${footer ? "footer-social" : "social"}`}>
     <a
       href="https://github.com/zbluee/"
       className="social-icon github"
