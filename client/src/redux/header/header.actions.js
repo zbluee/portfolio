@@ -17,3 +17,13 @@ export const toggleSkillsTabClose = (id) => ({
   type: headerActionTypes.TOGGLE_SKILLS_TAB_CLOSE,
   payload: id,
 });
+
+export const scrollToTop = (isScrolled) => ({
+  type: headerActionTypes.SCROLL_TO_TOP,
+  payload: isScrolled,
+});
+
+export const hoverActiveNav = (navName) => ({
+  type: headerActionTypes.HOVER_ACTIVE_NAV,
+  payload: navName,
+});

@@ -17,3 +17,12 @@ export const selectToggleSkillsTab = createSelector(
   selectHeader,
   (header) => header.toggleSkillsTab
 );
+export const selectScrollUp = createSelector(
+  selectHeader,
+  (header) => header.scrollUp
+);
+
+export const selectActiveNav = createSelector(
+  selectHeader,
+  (header) => header.activeNav
+);

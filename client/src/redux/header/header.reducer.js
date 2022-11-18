@@ -4,6 +4,8 @@ const INITIAL_STATE = {
   toggleTheme: false,
   toggleTab: null,
   toggleSkillsTab: null,
+  scrollUp: false,
+  activeNav: "home",
 };
 
 const headerReducer = (state = INITIAL_STATE, action) => {
@@ -27,6 +29,16 @@ const headerReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         toggleSkillsTab: action.payload,
+      };
+    case headerActionTypes.SCROLL_TO_TOP:
+      return {
+        ...state,
+        scrollUp: action.payload,
+      };
+    case headerActionTypes.HOVER_ACTIVE_NAV:
+      return {
+        ...state,
+        activeNav: action.payload,
       };
     default:
       return state;
