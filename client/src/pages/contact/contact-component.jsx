@@ -14,13 +14,13 @@ class Contact extends React.Component {
       formErrors: {},
       successMsg: "",
       failedSubmitMsg: "",
-      loading : false
+      loading: false,
     };
   }
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     const { name, email, message } = this.state;
     const errors = {};
     const regex =
@@ -35,7 +35,7 @@ class Contact extends React.Component {
     this.setState({ formErrors: errors });
 
     if (!Object.keys(errors).length) {
-      this.setState({loading : true})
+      this.setState({ loading: true });
       const url = "http://localhost:3001/api/v1/comments";
       try {
         const res = await axios.post(url, { name, email, message });
@@ -44,7 +44,7 @@ class Contact extends React.Component {
           name: "",
           email: "",
           message: "",
-          loading : false
+          loading: false,
         });
         setTimeout(() => {
           this.setState({ successMsg: "" });
@@ -53,10 +53,11 @@ class Contact extends React.Component {
         this.setState({
           failedSubmitMsg:
             "An error occured while sending your message, please try again",
+          loading: false,
         });
         setTimeout(() => {
           this.setState({ failedSubmitMsg: "" });
-        }, 5000);
+        }, 6000);
       }
     }
   };
@@ -66,8 +67,15 @@ class Contact extends React.Component {
     this.setState({ [name]: value });
   };
   render() {
-    const { name, email, message, formErrors, successMsg, failedSubmitMsg, loading } =
-      this.state;
+    const {
+      name,
+      email,
+      message,
+      formErrors,
+      successMsg,
+      failedSubmitMsg,
+      loading,
+    } = this.state;
     return (
       <section className="section contact" id="contact">
         <h2 className="section-title">Contact Me</h2>
@@ -116,7 +124,8 @@ class Contact extends React.Component {
             {<p className="validation-error">{formErrors.email}</p>}
             {<p className="validation-error">{formErrors.message}</p>}
             <button type="submit" className="button button-flex submit">
-              Send <Send /> <span className={`${loading ? "loading" : ""}`}></span>
+              Send <Send />{" "}
+              <span className={`${loading ? "loading" : ""}`}></span>
             </button>
           </form>
         </div>
