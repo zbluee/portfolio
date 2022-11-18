@@ -27,7 +27,11 @@ const sendComments = async (req, res) => {
 };
 
 const getComments = async (req, res) => {
-  res.status(StatusCodes.OK).json({ success: true, body: "comments" });
+  res.status(StatusCodes.OK).json({ success: true, data: "Get All Comments" });
 };
 
-export { sendComments, getComments };
+const getComment = async (req, res ) => {
+  res.status(StatusCodes.OK).json({success : true, data : "Get a single comment"})
+}
+
+export { sendComments, getComments, getComment };
