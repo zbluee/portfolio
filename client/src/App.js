@@ -12,6 +12,7 @@ import Work from "./pages/work/work.component";
 import Testimonials from "./pages/testimonials/testimonials.component";
 import Contact from "./pages/contact/contact-component";
 import Footer from "./pages/footer/footer.component";
+import ScrollUp from "./components/scroll-up/scroll-up.component";
 
 class App extends React.Component {
   render() {
@@ -29,6 +30,7 @@ class App extends React.Component {
           <Contact />
         </main>
           <Footer />
+          <ScrollUp />
       </div>
     );
   }
