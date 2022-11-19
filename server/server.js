@@ -1,4 +1,7 @@
+import {} from "dotenv/config";
+import "express-async-errors";
 import express from "express";
+import { connectDB } from "./db/connection.js";
 import { authRoute } from "./routes/auth.js";
 import { commentsRoute } from "./routes/comments.js";
 import { notFoundMiddleware } from "./middleware/not-found.js";
@@ -28,4 +31,13 @@ app.use("/api/v1/about", aboutRoute);
 app.use(errorHandlerMiddleware);
 app.use(notFoundMiddleware);
 
-app.listen(port, () => console.log(`server is listening on port ${port}`));
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URL);
+    app.listen(port, () => console.log(`server is listening on port ${port}`));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
