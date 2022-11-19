@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.styles.css";
 import ProfileImg from "../../assets/profile.jpg";
-import AboutContent from "../../components/about-content/about-content.component";
+import AboutContent from "../about-content/about-content.component";
 import { ReactComponent as FileDownload } from "../../assets/file-download.svg";
 
 const About = () => (

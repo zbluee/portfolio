@@ -1,5 +1,6 @@
 import React from "react";
 import "./home-content.styles.css";
+import {HashLink as Link} from "react-router-hash-link"
 import { ReactComponent as Hand } from "../../assets/hand.svg";
 import { ReactComponent as Send } from "../../assets/send.svg";
 import Typewriter from "typewriter-effect";
@@ -8,9 +9,9 @@ const HomeContent = () => (
   <div className="content">
     <h1 className="title">
       Amanuel T.{" "}
-      <a href="#contact">
+      <Link to="/contact#contact">
         <Hand />{" "}
-      </a>
+      </Link>
     </h1>
     <h3 className="subtitle">
       Web
@@ -28,9 +29,9 @@ const HomeContent = () => (
       I'm web developer and web scrapper who is highly interested on ml and
       cyber security.
     </p>
-    <a href="#contact" className="button button-flex" id="ct-btn">
+    <Link to="/contact#contact" className="button button-flex" id="ct-btn">
       Contact Me <Send />
-    </a>
+    </Link>
   </div>
 );
 

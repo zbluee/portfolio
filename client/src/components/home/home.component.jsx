@@ -1,7 +1,7 @@
 import React from "react";
-import HomeContent from "../../components/home-content/home-content.component";
-import ScrollDown from "../../components/scroll-down/scroll-down.component";
-import Social from "../../components/social-link/social-link.component";
+import HomeContent from "../home-content/home-content.component";
+import ScrollDown from "../scroll-down/scroll-down.component";
+import Social from "../social-link/social-link.component";
 import "./home.styles.css";
 
 const Home = () => (

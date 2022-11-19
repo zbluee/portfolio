@@ -24,7 +24,7 @@
     grid-template-columns: repeat(1, 290px);
   }
 }
-@media screen and (max-width: 992pz) {
+@media screen and (max-width: 992px) {
     .services-container {
       grid-template-columns: repeat(2, 260px);
     }

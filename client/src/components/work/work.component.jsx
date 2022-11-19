@@ -1,5 +1,5 @@
 import React from "react";
-import Works from "../../components/works/works.component";
+import Works from "../works-collection/works.component";
 
 export const Work = () => (
     <section className="work section" id="portfolio">

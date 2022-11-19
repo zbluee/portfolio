@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.styles.css";
+import { HashLink as Link} from "react-router-hash-link"
 import { connect } from "react-redux";
 import {
   toggleMenuHidden,
@@ -16,46 +17,46 @@ import {
 const Header = ({ toggleMenu, toggleTheme, activeNav, dispatch }) => (
   <header className="header">
     <nav className="nav container">
-      <a href="index.html" className="nav-logo">
+      <Link smooth to="/#home" className={activeNav === "home" ? "nav-logo active-link" : "nav-logo"}>
         Amanuel T.
-      </a>
+      </Link>
       <div className={toggleMenu ? "nav-menu show-menu" : "nav-menu"}>
         <ul className="nav-list grid">
           <li className="nav-item">
-            <a href="#home" className={activeNav === "home"? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("home"))}>
+            <Link smooth to="/#home" className={activeNav === "home"? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("home"))}>
               <i className="uil uil-estate nav-icon"></i>
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#about" className={activeNav === "about" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("about"))}>
+            <Link smooth to="/#about"  className={activeNav === "about" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("about"))}>
               <i className="uil uil-user nav-icon"></i>
               About
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#skills" className={activeNav === "skills" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("skills"))}>
+            <Link smooth to="/#skills" className={activeNav === "skills" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("skills"))}>
               <i className="uil uil-file-alt nav-icon"></i>
               Skills
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#services" className={activeNav === "services" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("services"))}>
+            <Link smooth to="/#services" className={activeNav === "services" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("services"))}>
               <i className="uil uil-briefcase-alt nav-icon"></i>
               Services
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#portfolio" className={activeNav === "portfolio" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("portfolio"))}>
+            <Link smooth to="/#portfolio" className={activeNav === "portfolio" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("portfolio"))}>
               <i className="uil uil-scenery nav-icon"></i>
               Portfolio
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#contact" className={activeNav === "contact" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("contact"))}>
+            <Link smooth to="/contact#contact" className={activeNav === "contact" ? "nav-link active-link" : "nav-link"} onClick={() => dispatch(hoverActiveNav("contact"))}>
               <i className="uil uil-message nav-icon"></i>
               Contact
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a

@@ -3,7 +3,7 @@ import "./services.styles.css";
 import { connect } from "react-redux"
 import { createStructuredSelector } from "reselect";
 import { selectServiceLists } from "../../redux/service/service.selectors"
-import ServiceContent from "../../components/service-content/service-content.component";
+import ServiceContent from "../service-content/service-content.component";
 
 const Services = ({serviceLists}) => (
     <section className="services section" id="services">
