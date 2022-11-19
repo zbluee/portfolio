@@ -15,12 +15,14 @@ class BadRequestError extends CustomApiError {
 
 class UnauthenticatedError extends CustomApiError {
   constructor(message) {
+    super(message)
     this.statusCode = StatusCodes.UNAUTHORIZED;
   }
 }
 
 class NotFoundError extends CustomApiError {
   constructor(message) {
+    super(message)
     this.statusCode = StatusCodes.NOT_FOUND;
   }
 }
