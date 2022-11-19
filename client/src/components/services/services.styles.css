@@ -6,15 +6,10 @@
 
 /* Breakpoints  */
 /* For small devices  */
-@media screen and (max-width: 350px) {
-  .services-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 @media screen and (max-width: 576px) {
   .services-container {
-    grid-template-columns: repeat(1, 200px);
+    grid-template-columns: repeat(1, max-content) !important;
   }
 }
 
@@ -25,8 +20,7 @@
   }
 }
 @media screen and (max-width: 992px) {
-    .services-container {
-      grid-template-columns: repeat(2, 260px);
-    }
+  .services-container {
+    grid-template-columns: repeat(2, 260px);
   }
-
+}
