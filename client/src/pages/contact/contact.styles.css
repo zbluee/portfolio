@@ -96,9 +96,4 @@ button.submit {
   }
 }
 
-/* For large devices  */
-@media screen and (max-width: 992px) {
-  .contact-container {
-    column-gap: 3rem;
-  }
-}
+
