@@ -1,0 +1,51 @@
+.mg-0 {
+  margin: 0 auto 0;
+}
+
+.sign-in-container {
+  grid-template-columns: max-content;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  color: var(--title-color);
+}
+
+button.login {
+  padding: 0.5rem 1.5rem;
+}
+
+.success-msg,
+.failed-msg {
+  background-color: var(--box-background-color);
+  font-size: var(--small-font-size);
+  border-radius: 4px;
+  position: relative;
+  top: 3.5rem;
+}
+
+.success-msg {
+  color: #28a745;
+}
+
+.failed-msg {
+  color: #dc3545;
+}
+
+/* Breakpoints  */
+/* For small devices  */
+
+@media screen and (max-width: 576px) {
+  .sign-in-container {
+    width: auto;
+  }
+}
+
+/* For medium devices  */
+@media screen and (max-width: 768px) {
+  .sign-in-container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}
