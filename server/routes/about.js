@@ -6,14 +6,15 @@ import {
   getSectionContents,
   updateSectionContent,
 } from "../controller/about.js";
+import { authMiddleware } from "../middleware/auth.js";
 
 const router = express.Router();
 
-router.route("/").get(getSectionContents).post(createSectionContent);
+router.route("/").get(getSectionContents).post(authMiddleware, createSectionContent);
 router
   .route("/:id")
-  .get(getSectionContent)
-  .patch(updateSectionContent)
-  .delete(deleteSectionContent);
+  .get(authMiddleware, getSectionContent)
+  .patch(authMiddleware, updateSectionContent)
+  .delete(authMiddleware, deleteSectionContent);
 
 export { router as aboutRoute };

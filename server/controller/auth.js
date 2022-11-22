@@ -11,7 +11,7 @@ const register = async (req, res) => {
   const token = user.createJWT();
   res
     .status(StatusCodes.CREATED)
-    .json({ sucess: true, token, msg: "Successfully registered " });
+    .json({ success: true, token, msg: "Successfully registered " });
 };
 
 const login = async (req, res) => {
@@ -20,13 +20,13 @@ const login = async (req, res) => {
     throw new BadRequestError("please provide username and password");
   const user = await User.findOne({ username });
 
-  if (!user) throw new UnauthenticatedError("Invalid Credentials");
+  if (!user || user.isAdmin === false) throw new UnauthenticatedError("Invalid Credentials");
   const match = await user.isPasswordMatch(password);
   if (!match) throw new UnauthenticatedError("Invalid Credentials");
   const token = user.createJWT();
   res
     .status(StatusCodes.OK)
-    .json({ sucess: true, token, msg: "Successfully logged in " });
+    .json({ success: true, token, msg: "Successfully logged in" });
 };
 
 export { login, register };

@@ -18,7 +18,7 @@ const userSchema = mongoose.Schema({
     type: Boolean,
     default: false,
   },
-});
+}, {timestamps : true});
 
 userSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, 10);
@@ -26,7 +26,7 @@ userSchema.pre("save", async function () {
 
 userSchema.methods.createJWT = function () {
   return jwt.sign(
-    { userId: this._id, username: this.username },
+    { userId: this._id, username: this.username, isAdmin : this.isAdmin },
     process.env.SECRET,
     { expiresIn: process.env.EXP }
   );
