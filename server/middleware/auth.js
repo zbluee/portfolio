@@ -8,7 +8,7 @@ export const authMiddleware = async (req, res, next) => {
   try {
     const token = authorization.split(" ")[1];
     const decoded = jwt.verify(token, process.env.SECRET);
-    res.user = { userId: decoded.userId, username: decoded.username, isAdmin : decoded.isAdmin };
+    req.user = { id: decoded.userId, username: decoded.username, isAdmin : decoded.isAdmin };
     next();
   } catch (error) {
     throw new UnauthenticatedError("Authentication Failed");
