@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import { BadRequestError } from "../errors/errors.js";
+import { BadRequestError, NotFoundError } from "../errors/errors.js";
 import Work from "../models/work.js";
 
 const getWorks = async (req, res) => {
@@ -22,7 +22,7 @@ const getWork = async (req, res) => {
     user: { id: userId },
   } = req;
   const work = await Work.findOne({ _id: workId, createdBy: userId });
-  if (!work) throw new BadRequestError(`No work with ${workId} found`);
+  if (!work) throw new NotFoundError(`No work with ${workId} found`);
   res.status(StatusCodes.OK).json({ success: true, work });
 };
 
@@ -32,7 +32,7 @@ const updateWork = async (req, res) => {
     user: { id: userId },
     body: { title, imageUrl, addressLink },
   } = req;
-  if (!title || !imageUrl || !addressLink)
+  if (title === '' || imageUrl === '' || addressLink === '')
     throw new BadRequestError(
       "please provide title, imageUrl and address link"
     );
@@ -41,7 +41,7 @@ const updateWork = async (req, res) => {
     req.body,
     { new: true, runValidators: true }
   );
-  if (!work) throw new BadRequestError(`No work with ${workId} found`);
+  if (!work) throw new NotFoundError(`No work with ${workId} found`);
   res
     .status(StatusCodes.OK)
     .json({ success: true, work, msg: "Successfully updated" });
@@ -53,7 +53,7 @@ const deleteWork = async (req, res) => {
     user: { id: userId },
   } = req;
   const work = await Work.findByIdAndDelete({ _id: workId, createdBy: userId });
-  if (!work) throw new BadRequestError(`No work with ${workId} found`);
+  if (!work) throw new NotFoundError(`No work with ${workId} found`);
   res
     .status(StatusCodes.OK)
     .json({ success: true, msg: "Successfully deleted" });
