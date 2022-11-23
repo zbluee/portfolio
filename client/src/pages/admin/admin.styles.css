@@ -1,0 +1,8 @@
+.admin-container{
+    grid-template-columns: max-content;
+    justify-content: center;
+}
+
+button.sign-out {
+    padding: 0.35rem 1rem;
+}

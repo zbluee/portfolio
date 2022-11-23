@@ -1,13 +1,19 @@
 import React from "react";
+import "./admin.styles.css"
 import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <h1>Admin page</h1>
+    <section className="admin section" id="about">
+    <h3 className="section-title">Admin page</h3>
+    <hr className="title-underline" />
+    <h2 className="section-title">UNDER CONSTRUCTION</h2>
+    <h2 className="section-subtitle">in progress</h2>
+    <div className="admin-container container grid">
       <button
+      className="button button-flex sign-out"
         onClick={() => {
           localStorage.clear("authStatus");
           navigate("/", { replace: true });
@@ -15,7 +21,8 @@ const Admin = () => {
       >
         log out
       </button>
-    </div>
+      </div>
+    </section>
   );
 };
 
