@@ -1,12 +1,12 @@
-import {} from "dotenv/config";
 import { StatusCodes } from "http-status-codes";
+import Comment from "../models/comment.js";
 import axios from "axios";
 
 const sendComments = async (req, res) => {
   const { name, email, message } = req.body;
   const ip = req.ip || req.socket.remoteAddress;
   try {
-    const response = await axios.post(
+    await axios.post(
       `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`,
       {
         chat_id: process.env.CHAT_ID,
@@ -14,6 +14,7 @@ const sendComments = async (req, res) => {
         parse_mode: "HTML",
       }
     );
+    await Comment.create({ ...req.body });
     res.status(StatusCodes.CREATED).json({
       success: true,
       msg: "Your message has been successfully sent",
@@ -27,11 +28,9 @@ const sendComments = async (req, res) => {
 };
 
 const getComments = async (req, res) => {
-  res.status(StatusCodes.OK).json({ success: true, data: "Get All Comments" });
+  const comments = await Comment.find({}).sort({createdAt : "desc"})
+  res.status(StatusCodes.OK).json({ success: true, comments });
 };
 
-const getComment = async (req, res ) => {
-  res.status(StatusCodes.OK).json({success : true, data : "Get a single comment"})
-}
 
-export { sendComments, getComments, getComment };
+export { sendComments, getComments };
