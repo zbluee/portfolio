@@ -6,14 +6,15 @@ import {
   getTestimony,
   updateTestimony,
 } from "../controller/testimonies.js";
+import { authMiddleware } from "../middleware/auth.js"
 
 const router = express.Router();
 
-router.route("/").get(getTestimonies).post(createTestimony);
+router.route("/").get(getTestimonies).post( authMiddleware, createTestimony);
 router
   .route("/:id")
-  .get(getTestimony)
-  .patch(updateTestimony)
-  .delete(deleteTestimony);
+  .get(authMiddleware, getTestimony)
+  .patch(authMiddleware, updateTestimony)
+  .delete(authMiddleware, deleteTestimony);
 
 export { router as testimoniesRoute };
