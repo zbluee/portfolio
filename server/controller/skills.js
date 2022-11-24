@@ -8,7 +8,7 @@ const getSkills = async (req, res) => {
 
 const createskill = async (req, res) => {
   const skill = await Skill.create({ ...req.body, createdBy: req.user.id });
-  res.status(StatusCodes.OK).json({ success: true, msg: "Successfully Created" });
+  res.status(StatusCodes.CREATED).json({ success: true, msg: "Successfully Created" });
 };
 
 const getskill = async (req, res) => {
@@ -18,7 +18,7 @@ const getskill = async (req, res) => {
   } = req;
   const skill = await Skill.findOne({ _id: skillId, createdBy: userId })
   if (!skill) throw new NotFoundError(`No skill with ${skillId} found`);
-  res.status(StatusCodes.CREATED).json({ success: true, skill});
+  res.status(StatusCodes.OK).json({ success: true, skill});
 };
 
 const updateSkill = async (req, res) => {

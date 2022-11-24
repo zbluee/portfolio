@@ -12,7 +12,7 @@ const getServices = async (req, res) => {
 const createService = async (req, res) => {
   const service = await Service.create({ ...req.body, createdBy: req.user.id });
   res
-    .status(StatusCodes.OK)
+    .status(StatusCodes.CREATED)
     .json({ success: true, msg: "Successfully Created" });
 };
 
@@ -24,7 +24,7 @@ const getService = async (req, res) => {
   const service = await Service.findOne({ _id: serviceId, createdBy: userId });
   if (!service)
     throw new NotFoundError(`No service with id : ${serviceId} found`);
-  res.status(StatusCodes.CREATED).json({ success: true, service });
+  res.status(StatusCodes.OK).json({ success: true, service });
 };
 
 const updateService = async (req, res) => {
