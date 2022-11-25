@@ -1,0 +1,611 @@
+openapi: 3.0.0
+info:
+  title: Portfolio-API
+  description: A REST API for retrieving, creating, updating, and deleting portfolio contents.
+  contact:
+    name: Amanuel T.
+    email: amanueltemesgen9@gmail.com
+  version: '1.0'
+servers:
+- url: https://zbluee-portfolio-api.herokuapp.com/api/v1
+  variables: {}
+paths:
+  /auth/register:
+    post:
+      tags:
+      - Authentication
+      summary: Register
+      operationId: Register
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  username: userone
+                  password: password
+            example:
+              username: userone
+              password: password
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /auth/login:
+    post:
+      tags:
+      - Authentication
+      summary: Login
+      operationId: Login
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  username: userone
+                  password: password
+            example:
+              username: userone
+              password: password
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /comments:
+    get:
+      tags:
+      - Comments
+      summary: Get All Comments
+      operationId: GetAllComments
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    post:
+      tags:
+      - Comments
+      summary: Create a Comment
+      operationId: CreateaComment
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  name: userone
+                  email: password
+                  message: your message here
+            example:
+              name: userone
+              email: password
+              message: your message here
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /works:
+    get:
+      tags:
+      - Works
+      summary: Get All Works
+      operationId: GetAllWorks
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+    post:
+      tags:
+      - Works
+      summary: Create a Work
+      operationId: CreateaWork
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  title: prediction system
+                  imageUrl: https://api/pred
+                  addressLink: https://predict.sym
+            example:
+              title: prediction system
+              imageUrl: https://api/pred
+              addressLink: https://predict.sym
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /works/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: Work's Item ID.
+    get:
+      tags:
+      - Works
+      summary: Get a single work
+      operationId: Getasinglework
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    patch:
+      tags:
+      - Works
+      summary: Update  a Work
+      operationId: UpdateaWork
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  title: pred system
+                  imageUrl: https://api/pred
+                  addressLink: https://pred.sym
+            example:
+              title: pred system
+              imageUrl: https://api/pred
+              addressLink: https://pred.sym
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+      - Works
+      summary: Delete a work
+      operationId: Deleteawork
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /testimonies:
+    get:
+      tags:
+      - Testimonies
+      summary: Get All Testimonies
+      operationId: GetAllTestimonies
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+    post:
+      tags:
+      - Testimonies
+      summary: Create a Testimony
+      operationId: CreateaTestimony
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  name: Abel M.
+                  description: your description here
+                  position: software engineer, Google
+            example:
+              name: Abel M.
+              description: your description here
+              position: software engineer, Google
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /testimonies/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: testimony Item ID.
+    get:
+      tags:
+      - Testimonies
+      summary: Get a single Testimony
+      operationId: GetasingleTestimony
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    patch:
+      tags:
+      - Testimonies
+      summary: Update  a Testimony
+      operationId: UpdateaTestimony
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  name: Abel M.
+                  description: your description here
+                  position: Web Developer, Amazon
+            example:
+              name: Abel M.
+              description: your description here
+              position: Web Developer, Amazon
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+      - Testimonies
+      summary: Delete a Testimony
+      operationId: DeleteaTestimony
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /skills:
+    get:
+      tags:
+      - Skills
+      summary: Get All Skills
+      operationId: GetAllSkills
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+    post:
+      tags:
+      - Skills
+      summary: Create a Skills
+      operationId: CreateaSkills
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  skillTitle : Backend Developer
+                  skills :  [
+                    {skillName: Go,
+                    skillLevel: Intermidiate}
+                      ]
+            example:
+              skillTitle : Backend Developer
+              skills :  [
+                  {skillName: Go,
+                  skillLevel: Intermidiate}
+                  ]
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /skills/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: Skill's Item ID.
+    get:
+      tags:
+      - Skills
+      summary: Get a single Skill
+      operationId: GetasingleSkill
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    patch:
+      tags:
+      - Skills
+      summary: Update  a Skill
+      operationId: UpdateaSkill
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  skillTitle : Backend Developer
+                  skills :  [
+                    {skillName: Laravel,
+                    skillLevel: Intermidiate}
+                      ]
+            example:
+              skillTitle : Backend Developer
+              skills :  [
+                  {skillName: Laravel,
+                  skillLevel: Intermidiate}
+                  ]
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+      - Skills
+      summary: Delete a Skill
+      operationId: DeleteaSkill
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /services:
+    get:
+      tags:
+      - Services
+      summary: Get All Services
+      operationId: GetAllServices
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+    post:
+      tags:
+      - Services
+      summary: Create Service
+      operationId: CreateService
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  titleSvg: Code
+                  title: Backend Developer
+                  description: Experienced in frontend and backend development, as well as website maintenance and hosting.
+                  infos :  [
+                    {info: API Development}
+                        ]
+            example:
+              titleSvg: Code
+              title: Backend Developer
+              description: Experienced in frontend and backend development, as well as website maintenance and hosting.
+              infos :  [
+                    {info: API Development}
+                        ]
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /services/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: Service's Item ID.
+    get:
+      tags:
+      - Services
+      summary: Get a single Service
+      operationId: GetasingleService
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    patch:
+      tags:
+      - Services
+      summary: Update  a Service
+      operationId: UpdateaService
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  titleSvg: Code
+                  title: Web Developer
+                  description: Experienced in frontend and backend development, as well as website maintenance and hosting.
+                  infos :  [
+                    {info: Frontend Development}
+                        ]
+            example:
+              titleSvg: Code
+              title: Web Developer
+              description: Experienced in frontend and backend development, as well as website maintenance and hosting.
+              infos :  [
+                    {info: Frontend Development}
+                        ]
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+      - Services
+      summary: Delete a Service
+      operationId: DeleteaService
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /about:
+    get:
+      tags:
+      - Contents
+      summary: Get All About Data
+      operationId: GetAllAboutData
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+    post:
+      tags:
+      - Contents
+      summary: Create About Data
+      operationId: CreateAboutData
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  title: Education
+                  subtitle: Computer Science
+            example:
+              title: Education
+              subtitle: Computer Science
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /about/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: Content's Item ID.
+    get:
+      tags:
+      - Contents
+      summary: Get a single About Data
+      operationId: GetasingleAboutData
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    patch:
+      tags:
+      - Contents
+      summary: Update  About Data
+      operationId: UpdateAboutData
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - example:
+                  title: Education
+                  subtitle: Cyber Security
+            example:
+              title: Education
+              subtitle: Cyber Security
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+      - Contents
+      summary: Delete About Data
+      operationId: DeleteAboutData
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+components:
+  securitySchemes:
+    httpBearer:
+      type: http
+      scheme: bearer
+security:
+- httpBearer: []
+tags:
+- name: Authentication
+  description: 'route for registering and logging in users'
+- name: Comments
+  description: 'route for obtaining and creating comments'
+- name: Works
+  description: 'route for getting, creating, editing, and removing work items'
+- name: Testimonies
+  description: 'route for getting, creating, editing, and removing testiomials'
+- name: Skills
+  description: 'route for getting, creating, editing, and removing work skill items'
+- name: Services
+  description: 'route for getting, creating, editing, and removing work services'
+- name: Contents
+  description: 'route for getting, creating, editing, and removing content items'
