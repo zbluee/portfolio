@@ -7,6 +7,8 @@ import helmet from "helmet";
 import xss from "xss-clean"
 
 import express from "express";
+import swaggerUI from "swagger-ui-express";
+import YAML from "yamljs";
 import { connectDB } from "./db/connection.js";
 import { authRoute } from "./routes/auth.js";
 import { commentsRoute } from "./routes/comments.js";
@@ -18,6 +20,9 @@ import { skillsRoute } from "./routes/skills.js";
 import { servicesRoute } from "./routes/services.js";
 import { aboutRoute } from "./routes/about.js";
 
+//loading yaml file
+const docs = YAML.load("./docs.yaml")
+
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -28,6 +33,7 @@ app.use(helmet())
 app.use(xss())
 
 //routes
+app.use("/", swaggerUI.serve, swaggerUI.setup(docs))
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/comments", commentsRoute);
 app.use("/api/v1/works", worksRoute);
