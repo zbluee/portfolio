@@ -19,6 +19,7 @@ import { testimoniesRoute } from "./routes/testimonies.js";
 import { skillsRoute } from "./routes/skills.js";
 import { servicesRoute } from "./routes/services.js";
 import { aboutRoute } from "./routes/about.js";
+import { rootRoute } from "./routes/root.js";
 
 //loading yaml file
 const docs = YAML.load("./docs.yaml")
@@ -33,7 +34,8 @@ app.use(helmet())
 app.use(xss())
 
 //routes
-app.use("/", swaggerUI.serve, swaggerUI.setup(docs))
+app.use("/", rootRoute)
+app.use("/api/v1/docs", swaggerUI.serve, swaggerUI.setup(docs))
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/comments", commentsRoute);
 app.use("/api/v1/works", worksRoute);
