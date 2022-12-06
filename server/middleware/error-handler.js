@@ -19,12 +19,13 @@ export const errorHandlerMiddleware = async (err, req, res, next) => {
   }
   //Duplicate Error
   if ((err.code = 11000)) {
-    customError.message = `Please choose another value, duplicate value found : ${Object.keys(
-      err.keyValue
-    )} `;
-    customError.statusCode = StatusCodes.BAD_GATEWAY;
+    customError.message = err.keyValue
+      ? `Please choose another value, duplicate value found : ${Object.keys(
+          err.keyValue
+        )}}`
+      : "Invalid Credentials, There was a problem with your login.";
+    customError.statusCode = StatusCodes.BAD_REQUEST;
   }
-
   return res
     .status(customError.statusCode)
     .json({ success: false, msg: customError.message });
