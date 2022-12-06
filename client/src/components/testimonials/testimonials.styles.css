@@ -1,5 +1,5 @@
 .testimonial-container{
-    width: 800px;
+    width: 900px;
 }
 
 .testimonial-card {
@@ -12,8 +12,8 @@
 
 .testimonial-img{
     width: 60px;
-    border-radius: 3rem;
-    margin: var(--mb-1);
+    border-radius: 2rem;
+    margin: var(--mb-0-5);
 }
 
 .testimonial-name{
@@ -27,8 +27,9 @@
     color: var(--text-color);
 }
 .testimonial-occupation{
-    font-size: var(--tiny-font-size);
+    font-size: var(--small-font-size);
     color: var(--title-color);
+    margin-top: var(--mb-0-25);
 }
 
 .swiper-pagination-bullet {
