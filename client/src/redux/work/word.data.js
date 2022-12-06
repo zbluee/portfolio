@@ -11,6 +11,12 @@ const WORK_DATA = [
     imageUrl: "https://i.ibb.co/1v73R3T/jobs-api.png",
     addressLink: "https://jobs-api-job.herokuapp.com/api-docs/",
   },
+  {
+    id: 2,
+    title: "Portfolio API",
+    imageUrl: "https://i.ibb.co/KVTp7v5/portfolio-api.png",
+    addressLink: "https://zbluee-portfolio-api.herokuapp.com/api/v1/docs/",
+  },
   
 ];
 export default WORK_DATA;
