@@ -16,10 +16,11 @@ const SKILL_DATA = [
     skills: [
       { id: 0, skillName: "Express", skillLevel: "Advanced" },
       { id: 1, skillName: "Nodejs", skillLevel: "Intermidiate"},
-      { id: 2, skillName: "PHP", skillLevel: "Basic" },
-      { id: 3, skillName: "SQL", skillLevel: "Intermidiate" },
-      { id: 4, skillName: "MongoDB", skillLevel: "Intermidiate" },
-      { id: 5, skillName: "Firebase", skillLevel: "Basic" },
+      { id: 2, skillName: "Laravel", skillLevel: "Intermidiate"},
+      { id: 3, skillName: "PHP", skillLevel: "Basic" },
+      { id: 4, skillName: "SQL", skillLevel: "Intermidiate" },
+      { id: 5, skillName: "MongoDB", skillLevel: "Intermidiate" },
+      { id: 6, skillName: "Firebase", skillLevel: "Basic" },
     ],
   },
   {
@@ -28,6 +29,7 @@ const SKILL_DATA = [
     skills: [
       { id: 0, skillName: "Python", skillLevel: "Intermidiate" },
       { id: 1, skillName: "Java", skillLevel: "Intermidiate" },
+      { id: 1, skillName: "C#", skillLevel: "Intermidiate" },
       { id: 2, skillName: "C++", skillLevel: "Intermidiate" },
       { id: 3, skillName: "C", skillLevel: "Basic" },
     ],
