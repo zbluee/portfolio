@@ -7,7 +7,7 @@ info:
     email: amanueltemesgen9@gmail.com
   version: '1.0'
 servers:
-- url: https://zbluee-portfolio-api.herokuapp.com/api/v1
+- url: https://zbluee-portfolio-api.onrender.com/api/v1
   variables: {}
 paths:
   /auth/register:
