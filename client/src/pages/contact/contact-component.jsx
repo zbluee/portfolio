@@ -36,10 +36,9 @@ class Contact extends React.Component {
 
     if (!Object.keys(errors).length) {
       this.setState({ loading: true });
-      // const url = "http://localhost:3001/api/v1/comments";
-      const productionUrl = "https://zbluee-portfolio-api.herokuapp.com/api/v1/comments"
+      const url = "https://zbluee-portfolio-api.onrender.com/api/v1/comments"
       try {
-        const res = await axios.post(productionUrl, { name, email, message });
+        const res = await axios.post(url, { name, email, message });
         console.log(res);
         this.setState({
           successMsg: res.data.msg,
