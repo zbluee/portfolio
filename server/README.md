@@ -2,7 +2,7 @@
 A simple REST API built with express.js for the portfolio, with authentication via jsonwebtoken and a MongoDB database, as well as security packages such as helmet, cors, and xss to improve security and documentation via swagger UI.
 
 
-## [API Routes](https://zbluee-portfolio-api.herokuapp.com/api/v1/docs)
+## [API Routes](https://zbluee-portfolio-api.onrender.com/api/v1/docs)
 
 - `/api/v1/docs` - route for API documentation
 - `/api/v1/comments/*` - route for obtaining and creating comments
