@@ -1,4 +1,4 @@
-import WORK_DATA from "./word.data";
+import WORK_DATA from "./work.data";
 
 const INITIAL_STATE = {
   workLists: WORK_DATA,
