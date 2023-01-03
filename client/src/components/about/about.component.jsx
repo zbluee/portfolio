@@ -17,7 +17,7 @@ const About = () => (
           extraction, ingesting, and handling while saving valuable time
         </p>
         <a
-          href="https://drive.google.com/file/d/1DEf_eLGFbrtkQNotQAm02IIEmJ3ZYqz3/view?usp=share_link"
+          href="https://drive.google.com/file/d/1SR3n5oHR8dqQ94t5hloj3fC_4cnPwyR6/view?usp=share_link"
           className="button button-flex"
           target="_blank"
           rel="noopener noreferrer"
