@@ -13,11 +13,11 @@ const About = () => (
       <div className="about-content">
         <AboutContent />
         <p className="about-descriprtion">
-          Computer Science student at Addis Ababa University | Web Scraper | assist in accessing good data
-          extraction, ingesting, and handling while saving valuable time
+          Computer Science graduate with a passion for software engineering, machine learning (ML), and cybersecurity.
+          Skilled in programming languages and experienced in developing web solutions.
         </p>
         <a
-          href="https://drive.google.com/file/d/1SR3n5oHR8dqQ94t5hloj3fC_4cnPwyR6/view?usp=share_link"
+          href="https://drive.google.com/file/d/1aoKVm4DJV-F9eebIyrTPr65ObsEolWjk/view?usp=sharing"
           className="button button-flex"
           target="_blank"
           rel="noopener noreferrer"
