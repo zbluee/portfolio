@@ -4,11 +4,11 @@ const ABOUT_CONTENT = [
     title: "Education",
     subtitle: "Computer Science",
   },
-  { id: 1, title: "Experience", subtitle: "Student" },
+  { id: 1, title: "Experience", subtitle: "Recent Graduate" },
   {
     id: 2,
     title: "Interest",
-    subtitle: "Cyber Security & ML",
+    subtitle: "Machine Learning & AI",
   },
 ];
 
