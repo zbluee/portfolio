@@ -14,20 +14,19 @@ const HomeContent = () => (
       </Link>
     </h1>
     <h3 className="subtitle">
-      Web
+      Software
       <span>
         <Typewriter
           options={{
             autoStart: true,
             loop: true,
-            strings: [" Developer.", " Scraper."],
+            strings: [" Engineer.", " Developer."],
           }}
         />
       </span>
     </h3>
     <p className="description">
-      I'm web developer and web scrapper who is highly interested on ml and
-      cyber security.
+      Experienced software engineer with a passion for machine learning (ML) and cybersecurity.
     </p>
     <Link to="/contact#contact" className="button button-flex" id="ct-btn">
       Contact Me <Send />
